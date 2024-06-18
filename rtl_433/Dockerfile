@@ -14,7 +14,7 @@ RUN apk add --no-cache --virtual .buildDeps \
 
 WORKDIR /build
 
-RUN git clone https://github.com/merbanan/rtl_433
+RUN git clone https://github.com/tds04/rtl_433
 WORKDIR ./rtl_433
 
 # Build a specific commit or tag.
