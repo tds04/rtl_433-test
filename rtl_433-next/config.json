@@ -14,11 +14,59 @@
   "usb": true,
   "udev": true,
   "options": {
-    "rtl_433_conf_file": "",
-    "retain": true
+    "device": 0,
+    "gain": 0,
+    "frequency": "433.92M",
+    "frequency_hop": ["433.92M", "915M"],
+    "hop_interval": 60,
+    "sample_rate": "1024k",
+    "convert_si": true,
+    "protocols": [10, 11, 40, 41, 55, 72, 73, 74, 149, 154, 160, 161, 163, 197, 228],
+    "pulse_detect": {
+      "auto_level": true
+    },
+    "mqtt": {
+      "host": "192.168.1.9",
+      "port": 1883,
+      "user": "mqtt",
+      "password": "Citrix.1981",
+      "retain": true,
+      "topic_prefix": "rtl_433/9b13b3f4-rtl433"
+    },
+    "output": {
+      "json_file": "/config/rtl_433/logs/output.json",
+      "kv": true
+    },
+    "log_level": 6,
+    "report_meta": true,
+    "report_protocol": true
   },
   "schema": {
-    "rtl_433_conf_file": "str?",
-    "retain": "bool"
+    "device": "int?",
+    "gain": "int?",
+    "frequency": "str",
+    "frequency_hop": ["str?"],
+    "hop_interval": "int?",
+    "sample_rate": "str?",
+    "convert_si": "bool?",
+    "protocols": ["int?"],
+    "pulse_detect": {
+      "auto_level": "bool?"
+    },
+    "mqtt": {
+      "host": "str?",
+      "port": "port?",
+      "user": "str?",
+      "password": "password?",
+      "retain": "bool?",
+      "topic_prefix": "str?"
+    },
+    "output": {
+      "json_file": "str?",
+      "kv": "bool?"
+    },
+    "log_level": "int(1,8)?",
+    "report_meta": "bool?",
+    "report_protocol": "bool?"
   }
 }
