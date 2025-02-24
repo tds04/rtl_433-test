@@ -24,7 +24,7 @@
     "protocol": "10,11,40,41,55,72,73,74,149,154,160,161,163,197,228",
     "hop_interval": 60,
     "frequency_hop": "433.92M,915M",
-    "mqtt_host": "192.168.1.9",
+    "mqtt_host": "",
     "mqtt_port": 1883,
     "mqtt_user": "mqtt",
     "mqtt_pass": "",
