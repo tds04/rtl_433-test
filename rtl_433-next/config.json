@@ -29,7 +29,7 @@
       "host": "192.168.1.9",
       "port": 1883,
       "user": "mqtt",
-      "password": "Citrix.1981",
+      "password": "",
       "retain": true,
       "topic_prefix": "rtl_433/9b13b3f4-rtl433"
     },
@@ -42,31 +42,32 @@
     "report_protocol": true
   },
   "schema": {
-    "device": "int(default=0)",  # Default SDR device index
-    "gain": "int(default=0)",  # Auto gain if 0
-    "frequency": "str(default='433.92M')",  # Default frequency in MHz
-    "frequency_hop": ["str"],  # Allow multiple frequencies
-    "hop_interval": "int(default=60)",  # Default hop interval (seconds)
-    "sample_rate": "str(default='1024k')",  # Default sample rate
-    "convert_si": "bool(default=true)",  # Convert to SI units
-    "protocols": ["int"],  # List of protocols to enable
+    "device": "int?",
+    "gain": "int?",
+    "frequency": "str?",
+    "frequency_hop": ["str?"],
+    "hop_interval": "int?",
+    "sample_rate": "str?",
+    "convert_si": "bool?",
+    "protocols": ["int?"],
     "pulse_detect": {
-      "auto_level": "bool(default=true)"  # Auto pulse detection
+      "auto_level": "bool?"
     },
     "mqtt": {
-      "host": "str(default='192.168.1.9')",  # MQTT broker IP
-      "port": "port(default=1883)",  # MQTT port
-      "user": "str(default='mqtt')",  # MQTT user
-      "password": "password",  # MQTT password (no default for security)
-      "retain": "bool(default=true)",  # Retain MQTT messages
-      "topic_prefix": "str(default='rtl_433/9b13b3f4-rtl433')"  # Topic prefix
+      "host": "str?",
+      "port": "port?",
+      "user": "str?",
+      "password": "password?",
+      "retain": "bool?",
+      "topic_prefix": "str?"
     },
     "output": {
-      "json_file": "str(default='/config/rtl_433/logs/output.json')",  # Default log location
-      "kv": "bool(default=true)"  # Enable key-value output
+      "json_file": "str?",
+      "kv": "bool?"
     },
-    "log_level": "int(default=6, min=1, max=8)",  # Log level range 1-8
-    "report_meta": "bool(default=true)",  # Report metadata
-    "report_protocol": "bool(default=true)"  # Report detected protocol
+    "log_level": "int(1,8)?",
+    "report_meta": "bool?",
+    "report_protocol": "bool?"
   }
 }
+
