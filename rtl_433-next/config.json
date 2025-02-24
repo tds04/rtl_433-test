@@ -48,9 +48,9 @@
     "frequency": "str?",
     "sample_rate": "str?",
     "convert_si": "bool?",
-    "protocol": ["int?"],
+    "protocol": "list(int)?",
     "hop_interval": "int?",
-    "frequency_hop": ["str?"],
+    "frequency_hop": "list(str)?",
     "mqtt_host": "str?",
     "mqtt_port": "port?",
     "mqtt_user": "str?",
@@ -68,4 +68,3 @@
     "output_kv": "bool?"
   }
 }
-
